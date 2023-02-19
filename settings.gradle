@@ -1,0 +1,3 @@
+rootProject.name = "AutoBright"
+include ':app'
+include ':base'

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item type="id" name="common_statusBar_util_fake_status_bar_view" />
+    <item type="id" name="common_statusBar_util_translucent_view" />
+    <item type="id" name="common_tag_first"/>
+</resources>

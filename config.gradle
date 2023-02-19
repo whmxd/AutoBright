@@ -1,0 +1,145 @@
+ext {
+    //单独调试id
+    /**
+     * 这里的只做参考，不做最终的ID配置，应该有很多地方的ID是硬编码
+     */
+    applicationId = [
+            appId : "com.wutong.autobright",
+    ]
+
+    //android版本号
+    android = [
+            compileSdkVersion: 32,
+            minSdkVersion    : 24,//android N TileService
+            targetSdkVersion : 33,
+            versionCode      : 2,
+            versionName      : "1.0.0",
+            // 第一位为大版本号，重大更新时修改
+            // 第二位为保留位
+            // 第三位为小版本号，只要更新必改
+            // 默认在末尾添加versionCode和打包时间
+    ]
+
+    //项目库
+    dependencies = [
+            immersionbar         : 'com.gyf.immersionbar:immersionbar:3.0.0',//状态栏
+            immersionbar_koltin  : 'com.gyf.immersionbar:immersionbar-ktx:3.0.0',
+            roundimageview       : 'com.makeramen:roundedimageview:2.3.0',//圆角
+            circleiamgeview      : 'de.hdodenhof:circleimageview:3.1.0',
+            rx_lifecycle3        : 'com.trello.rxlifecycle4:rxlifecycle-android-lifecycle-kotlin:4.0.2',
+
+            picasso              : 'com.squareup.picasso:picasso:2.5.2',
+            coroutines_android   : 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.3',
+            lifecycle_extensions : 'androidx.lifecycle:lifecycle-extensions:2.2.0',//JetPack
+            lifecycle_livedata   : 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0',
+            room                 : 'androidx.room:room-runtime:2.2.5',//数据库
+            room_compiler        : 'androidx.room:room-compiler:2.2.5',
+            CardView             : 'androidx.cardview:cardview:1.0.0',
+            legacy_support       : 'androidx.legacy:legacy-support-v4:1.0.0',
+            switchButton         : 'com.kyleduo.switchbutton:library:2.0.0',//开关按钮
+            scaleRecycler        : 'com.yarolegovich:discrete-scrollview:1.5.1',
+            jiguang_jverification: 'cn.jiguang.sdk:jverification:2.6.7',//极光一键认证
+            jiguang_jcore        : 'cn.jiguang.sdk:jcore:2.7.6',
+            jshare               : 'cn.jiguang.sdk:jshare:2.0.0', // 极光分享
+            jshare_qq            : 'cn.jiguang.sdk:jshare-qqmodel:2.0.0',  // 极光，QQ分享
+            jshare_sina          : 'cn.jiguang.sdk:jshare-sinamodel:2.0.0',  // 极光，新浪分享
+            location             : 'com.amap.api:location:latest.integration',//高德定位
+            map2d                : 'com.amap.api:map2d:latest.integration',//高德2d地图
+
+            tinypinyin           : 'com.github.promeg:tinypinyin-lexicons-android-cncity:2.0.3', //适用于Android的中国地区词典
+            ratbaring            : 'com.github.giswangsj:AndRatingBar:v1.0.0', //五角星
+            blurry               : 'jp.wasabeef:blurry:4.0.0', //高斯模糊
+            jsoup                : 'org.jsoup:jsoup:1.13.1', // 获取/解析html文本
+            asyncHttp            : 'com.loopj.android:android-async-http:1.4.9',//1.4.11//https://github.com/android-async-http/android-async-http
+            wechatSDK            : 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+', //微信依赖库
+            ossAndroid           : 'com.aliyun.dpa:oss-android-sdk:2.9.5', //阿里云文件上传
+
+            //官方
+            kotlin_version       : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+            core_ktx             : 'androidx.core:core-ktx:1.3.2',
+            appcompat            : 'androidx.appcompat:appcompat:1.3.1',
+            material             : 'com.google.android.material:material:1.4.0',
+
+            multidex             : 'androidx.multidex:multidex:2.0.1',//分包//https://developer.android.google.cn/studio/build/multidex?hl=zh-cn#groovy
+            recyclerView         : 'androidx.recyclerview:recyclerview:1.2.1',//ListView替代品//https://developer.android.google.cn/jetpack/androidx/releases/recyclerview
+            constraintlayout     : 'androidx.constraintlayout:constraintlayout:2.1.1',//RelativeLayout替代品//https://developer.android.google.cn/training/constraint-layout?hl=zh-cn
+            coroutines_core      : 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.1',//kotlin协程
+
+
+            //第三方
+            refreshKernel        : 'com.scwang.smart:refresh-layout-kernel:2.0.3',//核心必须依赖//gitee.com/scwang90/SmartRefreshLayout
+            refreshHeader        : 'com.scwang.smart:refresh-header-classics:2.0.3',//经典刷新头
+//            implementation  'com.scwang.smart:refresh-header-radar:2.0.1'       //雷达刷新头
+//            implementation  'com.scwang.smart:refresh-header-falsify:2.0.1'     //虚拟刷新头
+//            implementation  'com.scwang.smart:refresh-header-material:2.0.1'    //谷歌刷新头
+//            implementation  'com.scwang.smart:refresh-header-two-level:2.0.1'   //二级刷新头
+//            implementation  'com.scwang.smart:refresh-footer-ball:2.0.1'        //球脉冲加载
+            refresh_footer       : 'com.scwang.smart:refresh-footer-classics:2.0.3',//经典加载
+
+            adapterHelper        : 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4',//万能适配器
+
+            gson                 : 'com.google.code.gson:gson:2.8.8',//https://github.com/google/gson
+            fastjson             : 'com.alibaba:fastjson:1.2.76',//阿里巴巴json解析//https://github.com/alibaba/fastjson
+
+            agentWeb             : 'com.github.Justson.AgentWeb:agentweb-core:v4.1.9-androidx',//WebView//https://github.com/Justson/AgentWeb
+            downLoader           : 'com.github.Justson:Downloader:v4.2.0-androidx',//download//https://github.com/Justson/Downloader
+
+            xpopup               : 'com.github.li-xiaojun:XPopup:2.5.18',//弹窗/XPopupExt的基础//https://gitee.com/lxj_gitee/XPopup#gradle
+            XPopupExt            : 'com.github.li-xiaojun:XPopupExt:0.0.7',//弹窗/城市|时间//https://github.com/li-xiaojun/XPopupExt
+            davemorrissey        : 'com.davemorrissey.labs:subsampling-scale-image-view-androidx:3.10.0',//配合Xpopup,浏览大图使用
+            pickerView           : 'com.contrarywind:Android-PickerView:4.1.9',//日历选择器//https://github.com/Bigkoo/Android-PickerView
+            googleMaterial       : 'com.google.android.material:material:1.1.0',//DateTimePicker的基础
+            DateTimePicker       : 'com.github.loperSeven:DateTimePicker:0.3.3',//时间选择器//github.com/loperSeven/DateTimePicker
+
+            //宝藏框架，许多功能可从如下三个库获取
+            utilCode             : 'com.blankj:utilcodex:1.30.5',//工具类，内部功能较杂较多，多为静态函数可直接调用//https://github.com/Blankj/AndroidUtilCode/blob/master/lib/utilcode/README-CN.md
+            longanUtilCode       : 'com.github.DylanCaiCoding.Longan:longan:1.0.0',//非常齐全的工具类，使用了kotlin的扩展函数//https://github.com/DylanCaiCoding/Longan/blob/master/README_CN.md
+            RxTool               : 'com.github.tamsiree.RxTool:RxKit:2.6.3',//工具类，功能不多但是功能强大//https://github.com/Tamsiree/RxTool
+
+
+            umengCommon          : 'com.umeng.umsdk:common:9.4.4',//友盟必选
+            umengAsms            : 'com.umeng.umsdk:asms:1.4.1',//友盟必选
+            umengShare           : 'com.umeng.umsdk:share-core:7.1.6',//友盟分享必选
+            umengApm             : 'com.umeng.umsdk:apm:1.5.2',//友盟错误分析
+            umengShareWx         : 'com.umeng.umsdk:share-wx:7.1.6',//友盟分享微信完整版
+            umengShareQQ         : 'com.umeng.umsdk:share-qq:7.1.6',//QQ
+            umengShareQQSdk      : 'com.tencent.tauth:qqopensdk:3.53.0',
+
+            bugly                : 'com.tencent.bugly:crashreport:latest.release',//Bugly日志收集//bugly.qq.com/docs/user-guide/instruction-manual-android/
+            yueying              : 'com.ucweb.wpk:crashsdk:latest.release',//岳鹰崩溃日志收集//yueying-docs.effirst.com/android-join.html
+
+            glide                : 'com.github.bumptech.glide:glide:4.12.0',//Glide图片加载//github.com/bumptech/glide
+            glide_compiler       : 'com.github.bumptech.glide:compiler:4.12.0',//Glide的注解处理器/使用annotationProcessor 或者 kapt关键字导入
+
+            danmaku              : 'com.github.ctiao:DanmakuFlameMaster:0.5.3',//b站弹幕库-烈焰弹幕使-https://github.com/bilibili/DanmakuFlameMaster
+
+            pictureSelector      : 'io.github.lucksiege:pictureselector:v2.7.3-rc07',//图片选择器(包含第三方的库：PhotoView、luban、ucrop)
+
+            permissionx          : 'com.github.getActivity:XXPermissions:12.5',//权限框架//https://gitee.com/getActivity/XXPermissions
+
+            banner               : 'io.github.youth5201314:banner:2.2.2',//轮播图//https://github.com/youth5201314/banner
+
+            MPAndroidChart       : 'com.github.PhilJay:MPAndroidChart:v3.1.0',//图表//https://github.com/PhilJay/MPAndroidChart
+
+            EventBus             : 'org.greenrobot:eventbus:3.2.0',//EventBus/广播替代品//https://github.com/greenrobot/EventBus
+
+            webSocket            : 'org.java-websocket:Java-WebSocket:1.3.6',//webSocket
+            socketIo             : 'io.socket:socket.io-client:0.8.3',//socket.io
+
+            mqtt                 : 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5',//MQTT
+            mqttService          : 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1',
+
+            arouter_api          : 'com.alibaba:arouter-api:1.5.2',//阿里路由//github.com/alibaba/ARouter
+            arouter_compiler     : 'com.alibaba:arouter-compiler:1.5.2',//注解处理器
+            arouter_annotation   : 'com.alibaba:arouter-annotation:1.0.6',
+
+
+            OkDownload           : 'com.liulishuo.okdownload:okdownload:1.0.7-SNAPSHOT',//下载框架//https://github.com/lingochamp/okdownload  //https://github.com/lingochamp/FileDownloader/blob/master/README-zh.md
+            OkDownloadSqlite     : 'com.liulishuo.okdownload:sqlite:1.0.7-SNAPSHOT',//下载框架增加断点下载功能(辅助OkDownload)
+            OkDownloadhttp       : 'com.liulishuo.okdownload:okhttp:1.0.7-SNAPSHOT',//使用okhttp下载(辅助OkDownload)
+
+            marqueeTextView      : 'com.gitee.zjianxin:MarqueeTextView:1.1',//https://gitee.com/zjianxin/MarqueeTextView //跑马灯-滚动的文本组件(注意没有继承TextView)
+
+            Condom               : 'com.oasisfeng.condom:library:2.5.0',//保险套，避免第三方SDK唤醒其他app//https://github.com/oasisfeng/condom
+    ]
+}
