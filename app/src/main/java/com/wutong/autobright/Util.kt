@@ -20,7 +20,7 @@ object Util {
             if (!Settings.System.canWrite(context)) {
                 val intent = Intent(
                     Settings.ACTION_MANAGE_WRITE_SETTINGS,
-                    Uri.parse("package:fit.wutong.autobright")
+                    Uri.parse("package:com.wutong.autobright")
                 )
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 context.startActivity(intent)

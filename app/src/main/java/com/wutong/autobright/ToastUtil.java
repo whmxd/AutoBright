@@ -1,8 +1,7 @@
-package com.base.util;
+package com.wutong.autobright;
 
 import android.content.Context;
 import android.widget.Toast;
-
 
 /**
  * Toast统一管理类

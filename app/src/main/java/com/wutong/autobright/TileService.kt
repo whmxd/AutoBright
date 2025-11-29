@@ -3,7 +3,6 @@ package com.wutong.autobright
 import android.os.Build
 import android.service.quicksettings.TileService
 import androidx.annotation.RequiresApi
-import com.base.util.ToastUtil
 
 /**
  * 服务--标题栏 - 修改自动亮度开关

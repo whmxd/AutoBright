@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AutoBright">
 
+        <!--    小米 取消"读取应用列表权限"    -->
+        <meta-data android:name="do_not_need_get_installed_apps" android:value="true"/>
+
         <!-- 标题栏图标按钮 -->
         <service
             android:name="com.wutong.autobright.TileService"
