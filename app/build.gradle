@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace "com.wutong.autobright"
-    compileSdkVersion 33
+    compileSdkVersion 36
 
     defaultConfig {
         applicationId "com.wutong.autobright"
@@ -36,6 +36,9 @@ android {
     }
     buildFeatures {
         viewBinding true
+    }
+    lint {
+        baseline = file("lint-baseline.xml")
     }
 }
 
